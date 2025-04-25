@@ -1,57 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Lorenzo Torres</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <nav>
-      <a href="#Sobre-mi">Sobre mí</a>
-      <a href="#Proyectos">Proyectos</a>
-      <a href="#Contacto">Contacto</a>
-    </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lorenzo Torres | Desarrollador</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Lorenzo Torres</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#Sobre-mi">Sobre mí</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Proyectos">Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <header>
-      <h1>Lorenzo Torres</h1>
-      <h2>Estudiante de Análisis de Sistemas | Desarrollo Web</h2>
-    </header>
+  <header class="hero-section text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-3">Lorenzo Torres</h1>
+      <h2 class="display-6 mb-4">Estudiante de Análisis de Sistemas | Desarrollo Web</h2>
+      <a href="#Sobre-mi" class="btn btn-primary btn-lg px-4">Conoce más</a>
+    </div>
+  </header>
 
-    <main>
-      <section id="Sobre-mi">
-        <h2>Sobre mí</h2>
-        <div class="content">
-          <p>¡Hola! Soy Lorenzo Torres, estudiante de Análisis de Sistemas apasionado por el desarrollo web.</p>
-          <ul>
-            <li>Enfoque actual: HTML, CSS, JavaScript y frameworks modernos</li>
-            <li>Objetivo: Dominar desarrollo frontend/backend</li>
-            <li>Hobbies: Música, videojuegos y tecnología</li>
+  <main class="container">
+    <section id="Sobre-mi" class="py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-4">Sobre <span class="text-primary">mí</span></h2>
+          <p class="lead">¡Hola! Soy Lorenzo Torres, estudiante de Análisis de Sistemas apasionado por el desarrollo web.</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex align-items-center">
+              <i class="bi bi-code-slash text-primary me-3 fs-4"></i>
+              <span>Enfoque actual: HTML, CSS, JavaScript y frameworks modernos</span>
+            </li>
+            <li class="list-group-item d-flex align-items-center">
+              <i class="bi bi-bullseye text-primary me-3 fs-4"></i>
+              <span>Objetivo: Dominar desarrollo frontend/backend</span>
+            </li>
+            <li class="list-group-item d-flex align-items-center">
+              <i class="bi bi-headphones text-primary me-3 fs-4"></i>
+              <span>Hobbies: Música, videojuegos y tecnología</span>
+            </li>
           </ul>
         </div>
-      </section>
-
-      <section id="Proyectos">
-        <h2>Proyectos</h2>
-        <p>Próximamente...</p>
-      </section>
-
-      <section id="Contacto">
-        <h2>Contacto</h2>
-        <form>
-          <input type="text" placeholder="Nombre" required>
-          <input type="email" placeholder="Email" required>
-          <button type="submit">Enviar</button>
-        </form>
-      </section>
-    </main>
-
-    <footer>
-      <p>"Transformando código en experiencias digitales"</p>
-      <div class="social">
-        <a href="https://github.com/LorenzoTorress" aria-label="GitHub"><img src="img/github.png" alt="GitHub"></a>
-        <a href="https://www.linkedin.com/in/lorenzo-torres-it/" aria-label="LinkedIn"><img src="img/linkedin.png" alt="LinkedIn"></a>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <section id="Proyectos" class="py-5 bg-light rounded-3">
+      <h2 class="text-center fw-bold mb-5">Mis <span class="text-primary">Proyectos</span></h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <i class="bi bi-plus-circle-fill text-muted mb-3" style="font-size: 3rem"></i>
+              <h5 class="card-title">Próximamente</h5>
+              <p>Estoy trabajando en nuevos proyectos emocionantes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Contacto" class="py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="text-center fw-bold mb-5">Contáct<span class="text-primary">ame</span></h2>
+          <form id="contacto" class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" name="name" required>
+              <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+            </div>
+            <div class="col-md-6">
+              <label  class="form-label">Email</label>
+              <input type="text" class="form-control" id="corroe" name="email" required>
+              <div class="invalid-feedback">Por favor ingresa un email válido.</div>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Asunto</label>
+              <input type="text" class="form-control" id="asunto" name="subject" required>
+              <div class="invalid-feedback">Por favor ingresa un asunto válido.</div>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Mensaje</label>
+              <textarea type= "text" class="form-control" id="mensaje" name="message" rows="4" required></textarea>
+              <div class="invalid-feedback">Por favor escribe tu mensaje.</div>
+            </div>
+            <div class="col-12 d-grid">
+              <button class="btn btn-primary btn-lg" type="submit">Enviar mensaje</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">"Transformando código en experiencias digitales"</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="social-icons">
+            <a href="https://github.com/LorenzoTorress" class="text-white me-3" target="_blank">
+              <i class="bi bi-github fs-3"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/lorenzo-torres-it/" class="text-white" target="_blank">
+              <i class="bi bi-linkedin fs-3"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="text-center">
+        <p class="mb-0 small">© 2025 Lorenzo Torres | Desarrollador</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="formulario.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
